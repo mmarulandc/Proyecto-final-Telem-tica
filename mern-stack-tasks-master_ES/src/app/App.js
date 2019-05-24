@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -8,7 +9,8 @@ class App extends Component {
       title: '',
       description: '',
       _id: '',
-      tasks: []
+      tasks: [],
+      visitas: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.addTask = this.addTask.bind(this);
@@ -174,7 +176,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-
+        <Footer/>
       </div>
     )
   }
