@@ -12,7 +12,7 @@ variables:
   azureSubscription: '583b3874-a6ed-4e2b-907d-4af4ef3bf339'
 
   # Web app name
-  webAppName: 'ReactApp'
+  webAppName: 'mern-stack-tasks-master'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -61,7 +61,7 @@ stages:
               buildType: current
             
           - task: AzureRmWebAppDeployment@4
-            displayName: 'Azure App Service Deploy: ReactApp'
+            displayName: 'Azure App Service Deploy: mern-stack-tasks-master'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
