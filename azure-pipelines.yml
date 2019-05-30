@@ -61,7 +61,7 @@ stages:
               buildType: current
             
           - task: AzureRmWebAppDeployment@4
-            displayName: 'Azure App Service Deploy: mern-stack-tasks-master'
+            displayName: 'Azure App Service Deploy: ReactApp'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
