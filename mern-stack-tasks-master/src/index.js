@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const app = express();
 var url = require('url'),
-    server = app.listen(3000),
+    server = app.listen(process.env.PORT || 3000),
     querystring = require('querystring'),
     http = require('http'),
     io  = require('socket.io').listen(server);
@@ -14,7 +14,7 @@ var router = express.Router();
 const { mongoose } = require('./database');
 const Visita = require('./models/visitas');
 // Settings 
-//app.set('port', process.env.PORT || 3000);
+//app.set('port', process.env.PORT || 4000);
 
 // Middlewares
 app.use(morgan('dev'));
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));;
 
 // Starting the server
 app.listen(app.get('port'), () => {
-  console.log(`Server on port ${app.get('port')}`);
+  console.log(`Server on port 3000`);
 });
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <title>MERN STACK</title>
@@ -14,10 +14,10 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="/js/bundle.js"></script>
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script>
       var params = {query: 'name=' + document.URL};
-      var socket = io.connect('http://localhost:3000', params );
+      var socket = io.connect('https://node-app-en.azurewebsites.net/',params );
   
       socket.on('conexion', function (data) {
           console.log("this", data);
