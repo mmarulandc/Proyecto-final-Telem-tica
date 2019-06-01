@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const app = express();
 var url = require('url'),
-    server = app.listen(3000),
+    server = app.listen(4000),
     querystring = require('querystring'),
     http = require('http'),
     io  = require('socket.io').listen(server);
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));;
 
 // Starting the server
 app.listen(app.get('port'), () => {
-  console.log(`Server on port 3000`);
+  console.log(`Server on port 4000`);
 });
 
 
@@ -54,7 +54,7 @@ function sendVisita(callback) {
   });
   var options = {
       hostname: api_host,
-      port: 3000,
+      port: 4000,
       path: '/api/visitas',
       method: 'POST',
       headers: {
