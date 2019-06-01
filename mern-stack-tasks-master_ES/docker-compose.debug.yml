@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  mern-stack-tasks-master_es:
+    image: mern-stack-tasks-master_es
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 90:90
+      - 9229:9229
+    command: node --inspect=0.0.0.0:9229 src/index.js

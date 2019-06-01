@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  mern-stack-tasks-master_es:
+    image: mern-stack-tasks-master_es
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 90:90
